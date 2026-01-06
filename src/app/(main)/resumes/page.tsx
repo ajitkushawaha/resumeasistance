@@ -34,7 +34,11 @@ export default async function Page() {
       },
     }),
     getUserSubscriptionLevel(userId),
-  ]);
+  ]).catch((error) => {
+    console.error("Database connection failed:", error);
+    // Return fallback data to prevent page crash
+    return [[], 0, "free"] as const;
+  });
 
   return (
     <main className="mx-auto w-full max-w-7xl space-y-6 px-3 py-6">

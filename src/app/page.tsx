@@ -14,6 +14,7 @@ export default function Home() {
           width={150}
           height={150}
           className="mx-auto md:ms-0"
+          priority
         />
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
           Create the{" "}
@@ -24,7 +25,7 @@ export default function Home() {
         </h1>
         <p className="text-lg text-gray-500">
           Our <span className="font-bold">AI resume builder</span> helps you
-          design a professional resume, even if you&apos;re not very smart.
+          design a professional resume that stands out.
         </p>
         <Button asChild size="lg" variant="premium">
           <Link href="/resumes">Get started</Link>
@@ -36,6 +37,7 @@ export default function Home() {
           alt="Resume preview"
           width={600}
           className="shadow-md lg:rotate-[1.5deg]"
+          priority
         />
       </div>
     </main>
