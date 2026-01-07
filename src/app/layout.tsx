@@ -1,15 +1,17 @@
+import logo from "@/assets/logo.png";
 import { Toaster } from "@/components/ui/toaster";
+import { env } from "@/env";
 import { ClerkProvider } from "@clerk/nextjs";
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 import "./globals.css";
-import { env } from "@/env";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(env.NEXT_PUBLIC_BASE_URL),
+  icons: [{ rel: "icon", url: logo.src }],
   title: {
     template: "%s - AI Resume Builder",
     absolute: "AI Resume Builder",

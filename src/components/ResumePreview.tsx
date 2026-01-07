@@ -6,6 +6,7 @@ import { formatDate } from "date-fns";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { Badge } from "./ui/badge";
+import { any } from "zod";
 
 interface ResumePreviewProps {
   resumeData: ResumeValues;
@@ -18,7 +19,7 @@ export default function ResumePreview({
   contentRef,
   className,
 }: ResumePreviewProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   const { width } = useDimensions(containerRef);
 
